@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/boltdb/bolt"
+	"github.com/bigboltdb/bolt"
 )
 
 func TestCompact(t *testing.T) {
