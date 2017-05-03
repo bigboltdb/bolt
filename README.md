@@ -27,7 +27,7 @@ Refer to https://github.com/boltdb/bolt/issues/674 and
 https://github.com/boltdb/bolt/pull/679 for the
 discussion.
 
-Now back to your regularly scheduled README... See also github.com/boltdb/bolt.
+Now back to your regularly scheduled README... See also https://github.com/boltdb/bolt.
 
 boltdb
 ------
