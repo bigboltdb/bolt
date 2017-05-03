@@ -1,22 +1,36 @@
 Bolt [![Coverage Status](https://coveralls.io/repos/boltdb/bolt/badge.svg?branch=master)](https://coveralls.io/r/boltdb/bolt?branch=master) [![GoDoc](https://godoc.org/github.com/boltdb/bolt?status.svg)](https://godoc.org/github.com/boltdb/bolt) ![Version](https://img.shields.io/badge/version-1.2.1-green.svg)
 ====
 
-bigbolt
+bigboltdb
 -------
 
-Bigbolt is a fork of bolt that supports database
+Bigboltdb is a fork of boltdb that supports database
 compaction and thus can store big values (over 1MB).
 
-Writing big values causes the database file to fragment
+Writing big values causes fragmententation of
 the backing file, requiring regular compaction to avoid
-infinite file growth. Bigbolt provides a Compact() api
+infinite file growth. Bigboltdb provides a Compact() api
 call to do this, and a mechanism to establish regular,
-automatic compaction. 
+automatic compaction by setting the `db.CompactAfterCommitCount`
+field. 
+
+Other than this one change, bigboltdb is simple, friendly fork
+of boltdb.
+
+We intend stay completely compatable and to
+maintain 100% compatibility with upstream by merging any
+updates.
+
+This fork was required because the author of
+boltdb, sadly, does not wish to support compaction within boltdb.
+Refer to https://github.com/boltdb/bolt/issues/674 and
+https://github.com/boltdb/bolt/pull/679 for the
+discussion.
 
 Now back to your regularly scheduled README... See also github.com/boltdb/bolt.
 
-bolt
-----
+boltdb
+------
 
 Bolt is a pure Go key/value store inspired by [Howard Chu's][hyc_symas]
 [LMDB project][lmdb]. The goal of the project is to provide a simple,
